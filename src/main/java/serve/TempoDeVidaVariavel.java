@@ -1,6 +1,6 @@
+package serve;
 
-
-public class TempoDeVida {
+public class TempoDeVidaVariavel {
     public static void main(String[] args) {
         for (int i = 0; i < 3; i++ ){
             int y = -1; // y é recriado e reinicializado a cada lope

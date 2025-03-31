@@ -1,4 +1,4 @@
-package org.example;
+package org.example.EntradaDeDAdos;
 import java.util.Scanner;
 public class ErroComumm {
     public static void main(String[] args) {
@@ -12,6 +12,6 @@ public class ErroComumm {
     System.out.print("Digite sua cidade: ");
     String cidade = sc.nextLine();
 
-
+        System.out.println("cidade: " + cidade + " \n saldo " + saldo);
     }
 }

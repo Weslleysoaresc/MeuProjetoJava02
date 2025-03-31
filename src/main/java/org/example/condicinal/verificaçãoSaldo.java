@@ -13,12 +13,15 @@ public class verificaçãoSaldo {
 
 
 
-        if (saque <= saldo){
+        if (saque <= saldo){ //condição01
+            //Verdade
             saldo -= saque; //Atuliza o saldo
             System.out.println("Saque realizado! Novo saldo: " + saldo);
-        } else if(saque == saldo){
+        } else if(saque == saldo){ //condição02
+            //verdade
             System.out.println("você realizeou o saque total, seu saldo é 0");
         } else {
+            //falso
             System.out.println("Saldo insuficiente! vai colocar");
         }
 

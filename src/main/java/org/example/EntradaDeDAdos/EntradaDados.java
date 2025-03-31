@@ -1,4 +1,4 @@
-package org.example;
+package org.example.EntradaDeDAdos;
 import java.util.Scanner;
 
 public class EntradaDados {
@@ -6,10 +6,11 @@ public class EntradaDados {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite seu nome: ");
-        String nome = sc.nextLine();
+        String nome = sc.nextLine(); // nextLine() pula pra procima linha ate indentificar um enter.
 
         System.out.print("Digite seu CPF: ");
-        String cpf = sc.nextLine();
+        String cpf = sc.nextLine(); // nextLine() pula pra procima linha ate indentificar um enter.
+                                            //String é objeto não um tipo primitivo(original).
 
         System.out.print("Digite sua idade: ");
         int idade = sc.nextInt();
@@ -30,7 +31,7 @@ public class EntradaDados {
         System.out.println("Saldo Inicial: R$" + saldo);
         System.out.println("Conta Ativa: " + (contaAtiva ? "sim" : "não"));
 
-        sc.close();
+        sc.close(); //Precisamos fechar o scanner.
 
     }
 }

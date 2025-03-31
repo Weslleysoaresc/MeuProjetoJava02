@@ -1,4 +1,4 @@
-package org.example;
+package serve;
 
 public class BooleanDemo {
     public static void main(String[] args) {
@@ -12,6 +12,8 @@ public class BooleanDemo {
         status = false;
         System.out.println("Status é :" + status);
     }
+
+
 
 
 }

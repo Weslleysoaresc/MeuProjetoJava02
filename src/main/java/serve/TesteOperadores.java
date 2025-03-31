@@ -1,4 +1,4 @@
-package org.example;
+package serve;
 
 public class TesteOperadores {
     public static void main(String[] args) {
@@ -58,7 +58,8 @@ if (d != 0 & (n / d) > 2){
 } else {
     System.out.println("Essa operação foi evitada!");
 
-}
+} // aqui dsa uma operação by zero porque divisão por zero não existe.
+        //mais podemos utilizar o curto cirquito que os dois juntos d != 0 & (n / d) > 2)
 
     }
 

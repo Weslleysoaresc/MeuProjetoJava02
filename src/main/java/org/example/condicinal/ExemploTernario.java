@@ -18,7 +18,7 @@ public class ExemploTernario
         } System.out.println("categorias: " + categoria);
 
 //usando operador ternario
-        String categoriaTernario = (idade >= 10) ? "Adulto" : "Menor de idade";
+        String categoriaTernario = (idade >= 10) ? "Adulto" : "Menor de idade"; //expreções inline.
         System.out.println("Categoria (Ternario): " + categoriaTernario);
 
 
