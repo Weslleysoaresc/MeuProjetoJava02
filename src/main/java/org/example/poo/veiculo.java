@@ -10,22 +10,31 @@ public class veiculo  {
     int consumo;
 
 
+    veiculo(int passageiros, int tanque, int consumo){
+    // aqui colocamos parametros dentro do veiculo desta forma não vamos conseguir ultilizar no testeVeiculo, precisamos passar o valores lá na linha 6 do (testeVeiculo)
+
+    this.passageiros = passageiros; //aqui usamos o this que reconhece a variavel int passageiros que esta na linha 8
+    capacidadeCombustivel = tanque; //não coloquei o this porque ele vai procurar fora se não encontra o this.
+    this.consumo = consumo;
+}
 
     //METADO
 
    void autoApresentacao(){
        //mostrando o valores na tela.
-       System.out.println("Veiculo: " + passageiros);
-       System.out.println("Veiculo: " + capacidadeCombustivel);
-       System.out.println("Veiculo: " + consumo);
+       System.out.println("Veiculo: " + passageiros + " Passageiro");
+       System.out.println("Veiculo: " + capacidadeCombustivel + " Capacidade De Combustivel");
+       System.out.println("Veiculo: " + consumo + " Consumo");
     }
 
-    //METADO BÃO RETORNA NADA (VOID)
+    //METADO NÃO RETORNA NADA (VOID)
     public static  void minhaClasse(){
         System.out.println("Metado de classe " + TIPO_CARRO);
     }
 
+
     //Verificação de autonomia
+
     void verificarAutonomia (int autonomia){
        if (autonomia < 50){
            System.out.println("Atenção! Pouca autonomuia");
@@ -43,6 +52,8 @@ public class veiculo  {
     }
 
 
+    //Verificação de Combustivel
+
     String verificarCombustivel (double litros){
        if (litros <= 0) {
            return "tanque vazio!";
@@ -55,4 +66,32 @@ public class veiculo  {
 
     }
 
+    //metado de Verificação de consumo
+    // Fiz sozinho.
+    //Retorna uma string // entra int na variavel terceiroValor.
+
+
+    String verificarConsumo (int terceiroValor){
+        if (terceiroValor < 10 ){
+        return "Otimo está gastando pouco";
+    } else {
+        return "Gastando muito";
+    }
+    }
+
+  String abastecer (int litros) {
+    if (litros <= 0 ){
+      return "Quantidade inválida para abastecimento";
+    }
+
+        int total = capacidadeCombustivel + litros;  //soma os valores
+
+         if (total > 100 ){
+            return "Tanque cheio demais! Não é possível abastecer isso tudo.";
+
+          } else {
+            capacidadeCombustivel = total; //atualiza o tanque
+            return  "abastecido com sucesso. Nivel atual " + capacidadeCombustivel + "litros";
+            }
+    }
 }

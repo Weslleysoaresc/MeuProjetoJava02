@@ -9,7 +9,7 @@ public class ProgramaInicialArea {
         Scanner sc = new Scanner(System.in);
 
         //Entrada dados usuario
-        System.out.println("Digite a Largiura");
+        System.out.println("Digite a Largura");
         double largura = sc.nextDouble();
 
         System.out.println("Digite a Altura");
