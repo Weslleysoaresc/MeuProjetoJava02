@@ -1,16 +1,41 @@
 package org.example.estacionamento;
 
 public class Veiculo {
-    String placa;
-    String modelo;
-    long horaEntrada; // Armazena em milisegundos
+    //Privat
+    private String placa;
+   private  String modelo;
+   private long horaEntrada; // Armazena em milisegundos
+
+
+
+    //Getter and  Setter
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        if (placa.isBlank()){
+            return;
+        }
+        this.placa = placa;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
 
     //Construtor
 
-    public Veiculo(String placa, String modelo, long horaEntrada){
+    public Veiculo(String placa, String modelo ){
         this.placa = placa;
         this.modelo = modelo;
-        this.horaEntrada = horaEntrada;
+        this.horaEntrada = System.currentTimeMillis();
 
     }
 

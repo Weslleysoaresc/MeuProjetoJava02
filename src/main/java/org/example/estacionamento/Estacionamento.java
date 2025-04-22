@@ -65,7 +65,7 @@ public class Estacionamento {
     }
         System.out.println("Veiculos estacionados: ");
     for (Veiculo v : vagas){
-        System.out.println(" -> Placa " +  v.placa + " | Modelo " + v.modelo);
+        System.out.println(" -> Placa " + v.getPlaca() + " | Modelo " + v.getModelo());
     }
 
     }
@@ -84,7 +84,7 @@ public class Estacionamento {
 
 
         for (Veiculo v : vagas) {
-            if (v.placa.equalsIgnoreCase(placa)){
+            if (v.getPlaca().equalsIgnoreCase(placa)){
                 var tempo = v.calcularTemopoEstacionado();
                 var valorApagar = tempo * 5.0;
                 System.out.println("Tempo estacionado: " + tempo + " horas");
@@ -111,8 +111,8 @@ public class Estacionamento {
         System.out.print("\n Digite a modelo do veiculo");
         String modelo = scanner.nextLine();
 
-        long horaEntrada = System.currentTimeMillis();
-        var novoVeiculo = new Veiculo(placa, modelo,horaEntrada);
+
+        var novoVeiculo = new Veiculo(placa, modelo);
         vagas.add(novoVeiculo);
 
         System.out.println("Veiculo estacionado com sucesso!");
