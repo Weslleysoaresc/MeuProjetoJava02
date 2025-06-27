@@ -42,6 +42,6 @@ public class Veiculo {
     //Função(métado)
 public long calcularTemopoEstacionado(){
          long horaSainda = System.currentTimeMillis(); //Faz conversão para millisegundos
-    return  (horaSainda - this.horaEntrada) / (1000L * 60L * 60L); // calculo para converte para horas.
+    return  (horaSainda - this.horaEntrada) / (1000L * 60L * 60L); // calculo para converter  para horas.
 }
 }
