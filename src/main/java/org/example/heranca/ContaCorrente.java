@@ -21,7 +21,7 @@ public class ContaCorrente extends ContaBancaria{
     public void setTaxaOperação(){
 
     }
-
+//Sobrescrevendo o métado da class pai
     @Override
     public void sacar(double valor){
         var valorTotal = valor + taxaOperação;
@@ -35,7 +35,7 @@ public class ContaCorrente extends ContaBancaria{
             System.out.println("Saldo insuficiente ou valor invalido para a conta corrente");
         }
     }
-
+    //Sobrescrevendo o métado da class pai
     @Override
     public void exibirInformaçoes(){
 
