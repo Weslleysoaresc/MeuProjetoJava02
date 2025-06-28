@@ -10,10 +10,10 @@ public class ContaCorrente extends ContaBancaria{
 
 
     //Construtor ContaCorrente
-    public ContaCorrente(String titular, double saldoInicial, double taxaOperação){
+    public ContaCorrente(String titular, double saldoInicial, double taxaOperação, String tipoDeconta){
 
         //Usamos super para obter os mesmo atributos da super class (pai)
-        super(titular, saldoInicial);
+        super(titular, saldoInicial, tipoDeconta);
         this.taxaOperação = taxaOperação;
     }
 
@@ -38,6 +38,7 @@ public class ContaCorrente extends ContaBancaria{
 
     @Override
     public void exibirInformaçoes(){
+
         super.exibirInformaçoes();
         System.out.println("Taxa de operação: R$ " + taxaOperação);
     }

@@ -6,9 +6,9 @@ public class ContaPoupanca extends ContaBancaria {
 
 
     //construdor Conta Bancaria
-    public ContaPoupanca(String titular, double saldoInicial,double taxaRendimentoAnual){
+    public ContaPoupanca(String titular, double saldoInicial,double taxaRendimentoAnual, String tipoDeConta){
 
-        super(titular, saldoInicial); //super class vem primeiro sempre
+        super(titular, saldoInicial, tipoDeConta); //super class vem primeiro sempre
         this.taxaRendimentoAnual = taxaRendimentoAnual;
 
     }
