@@ -1,6 +1,6 @@
 package org.example.heranca;
 
-public class ContaBancaria {
+public abstract class ContaBancaria {
 
     //Atributos da class Pai
     private String titular;
@@ -14,7 +14,10 @@ public class ContaBancaria {
          this.tipoDeConta = tipoDeconta;
      }
 
-     //---------------------------------
+    protected ContaBancaria() {
+    }
+
+    //---------------------------------
 //Get --> Permite ler o titular e
 //Set --> Permite modificar o titular com controle;
 
@@ -32,6 +35,7 @@ public class ContaBancaria {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+
     }
 
     public String getTitular() {
@@ -54,13 +58,16 @@ public void depositar(double valor){
     }
 }
     //Method
-public void sacar(double valor){
+public double sacar(double valor){
         if (valor > 0 && valor <= saldo){
             saldo -= valor;
-            System.out.println("Saque de R$ " + valor + "relizado!");
-        }else {
+            System.out.println("Saque de R$ " + valor+ "relizado!");
+        } else {
             System.out.println("Saldo insuficiente ou valor inválido!");
+
         }
+
+        return valor;
 }
 
 public void Investir10Porcento(){
@@ -78,5 +85,9 @@ public void exibirInformaçoes(){
     System.out.println("Saldo: " + saldo);
     System.out.println("Tipo de conta: " + tipoDeConta);
 
+
+
 }
+
+    public abstract double calcularTaxaEspecial();
 }

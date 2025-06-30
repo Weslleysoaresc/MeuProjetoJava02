@@ -23,4 +23,9 @@ public class ContaPoupanca extends ContaBancaria {
         super.exibirInformaçoes();
         System.out.println("Taxa de rendimento anual: " + taxaRendimentoAnual + "%");
     }
+
+    @Override
+    public double calcularTaxaEspecial() {
+        return 2.0;
+    }
 }

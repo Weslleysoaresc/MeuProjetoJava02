@@ -1,4 +1,7 @@
 package org.example.heranca;
+
+import static org.example.heranca.OperaacaoBancaria.OP_SAQUE;
+
 //SubClass(contaCorrente) herdando carecteristica da class pai(contacBancaria)
 //Quando usamos o extends falamos para class herda algo da class pai.
 //Para herda é nessesario cria um contrutor para construir os atributos, porque na superclass(pai) tem atributos contrutivos.
@@ -17,13 +20,15 @@ public class ContaCorrente extends ContaBancaria{
         this.taxaOperação = taxaOperação;
     }
 
-
+public  double getTaxaOperação(){
+        return  taxaOperação;
+}
     public void setTaxaOperação(){
 
     }
 //Sobrescrevendo o métado da class pai
     @Override
-    public void sacar(double valor){
+    public double sacar(double valor){
         var valorTotal = valor + taxaOperação;
 
         if (valorTotal > 0 && valorTotal <= getSaldo()){
@@ -34,6 +39,7 @@ public class ContaCorrente extends ContaBancaria{
         }else {
             System.out.println("Saldo insuficiente ou valor invalido para a conta corrente");
         }
+        return valorTotal;
     }
     //Sobrescrevendo o métado da class pai
     @Override
@@ -41,5 +47,15 @@ public class ContaCorrente extends ContaBancaria{
 
         super.exibirInformaçoes();
         System.out.println("Taxa de operação: R$ " + taxaOperação);
+        System.out.println("Processando Saque Aguarde: " + OP_SAQUE);
+    }
+
+    @Override
+    public double calcularTaxaEspecial() {
+        if (getSaldo() > 5000.0){
+            return 10.0;
+        }
+
+        return 5.0;
     }
 }
