@@ -1,24 +1,27 @@
 package org.example.heranca;
 
+import jdk.jshell.Snippet;
+import org.example.StringDemo;
+
 import static org.example.heranca.OperaacaoBancaria.OP_SAQUE;
+import java.util.List;
 
 public class BancoDemo {
 
     public static void main(String[] args) {
         //exmplo1();
 
-
         exmplo2();
 
 
 
 
-   ContaPoupanca cp = new ContaPoupanca("Jose", 8000.0, 2.5, "Sua Conta é Conta Poupança");
-           OperaacaoBancaria op = new OperaacaoBancaria(OP_SAQUE, 800.0);
+        ContaPoupanca cp = new ContaPoupanca("Jose", 8000.0, 2.5, "Sua Conta é Conta Poupança");
 
+            OperaacaoBancaria opp = new OperaacaoBancaria("janina",4000,"Operação", 2,100);
 
-             double  valorDepoisDoSaque = cp.sacar(cp.getSaldo() - op.getValorDaOperacao());
-               System.out.println("Valor depois do Saque é : " + valorDepoisDoSaque);
+            opp.exibirInformaçoes();
+
 
         }
 
@@ -36,11 +39,17 @@ public class BancoDemo {
         rf = cp;
         cp.calcularTaxaEspecial();
         cp.exibirInformaçoes();
+        cp.depositar(30000.0);
+        cp.aplicarRendimento();
+        cp.Investir10Porcento();
+        cp.sacar(100);
+
         System.out.println();
 
 
         rf = cs;
         cs.exibirInformaçoes();
+        System.out.println();
 
     }
 

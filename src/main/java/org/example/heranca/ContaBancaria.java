@@ -52,16 +52,18 @@ public abstract class ContaBancaria {
 public void depositar(double valor){
     if (valor > 0){
         saldo += valor;
-        System.out.println("Depósito de R$" + valor + "relizado");
+        System.out.println("Depósito de R$ " + valor + " Relizado");
     }else {
         System.out.println("Valor de depositar invalido");
     }
 }
     //Method
 public double sacar(double valor){
+
+
         if (valor > 0 && valor <= saldo){
             saldo -= valor;
-            System.out.println("Saque de R$ " + valor+ "relizado!");
+            System.out.println("Saque de R$ " + valor + " relizado!");
         } else {
             System.out.println("Saldo insuficiente ou valor inválido!");
 
