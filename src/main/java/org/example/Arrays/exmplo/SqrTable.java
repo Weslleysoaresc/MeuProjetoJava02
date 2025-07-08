@@ -1,0 +1,22 @@
+package org.example.Arrays.exmplo;
+
+public class SqrTable {
+    public static void main(String[] args) {
+        int[][] sqrs = {
+                {1, 1}, // posição [0] [1]
+                {2, 4}, // posição [0] [1]
+                {3, 9}, // posição [0] [1]
+                {4, 16},// posição [0] [1]
+                {5, 25},
+                {6, 36},
+                {7, 49},
+                {8, 64},
+                {9, 81},
+                {10, 100}
+        };
+
+        for (int i = 0; i < sqrs.length; i++) {
+            System.out.println("Numero : " + sqrs[i][0] + " Quadrado : " + sqrs[i][1]);
+        }
+    }
+}

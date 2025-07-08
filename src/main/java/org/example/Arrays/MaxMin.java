@@ -1,19 +1,11 @@
 package org.example.Arrays;
 
+import java.util.Arrays;
+
 public class MaxMin {
     public static void main(String[] args) {
-        int[] nums = new int[10];
+        int[] nums = {10, 4, 7, 25, 1, -13, 8}; //inicializando um array
 
-        nums[0] = 12;
-        nums[1] = 1;
-        nums[2] = 47;
-        nums[3] = -91;
-        nums[4] = 99;
-        nums[5] = 3300;
-        nums[6] = 45;
-        nums[7] = 23;
-        nums[8] = -93;
-        nums[9] = 9;
 
         //Todos vão começar com indice 0, sendo assim já tendo o valor dessa position.
         int min = nums[0];
@@ -22,11 +14,23 @@ public class MaxMin {
         //Já temos o zero na logíca de cima, então vamos inicializar na posição 2
         for (int i = 1; i < nums.length; i++){
 
-            if(nums[i] < min){
+            if(nums[i] < min) min = nums[i];
+            if (nums[i] > max ) max = nums[i];
+
+            /*
+            Mesmo código que o decima!
+
+            for (int i = 1; i < nums.length; i++) {
+            if (nums[i] < min) {
                 min = nums[i];
             }
-        }
+            if (nums[i] > max) {
+                max = nums[i];
+            }
 
+            */
+        }
+        System.out.println(" Mínimo:  " + min + " Máximo: " + max);
     }
 
 

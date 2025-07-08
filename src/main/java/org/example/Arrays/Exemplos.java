@@ -6,6 +6,7 @@ public class Exemplos { // Declaração da classe principal
         //exemplotemperatura();
         // ExmploSaldos();
 
+
         int[] sample = new int[10];
 
 
